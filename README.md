@@ -1,37 +1,54 @@
-## Welcome to GitHub Pages
+# Getting Started with ColdBrew
 
-You can use the [editor on GitHub](https://github.com/go-coldbrew/go-coldbrew.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+Let's pretend you want to create a project called "echoserver". Rather than starting from scratch maybe copying some files and then editing the results to include your name, email, and various configuration issues that always get forgotten until the worst possible moment, get cookiecutter to do all the work.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+First, get Cookiecutter. Trust me, it's awesome:
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```text
+$ pip install cookiecutter
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+Alternatively, you can install `cookiecutter` with homebrew:
 
-### Jekyll Themes
+```text
+$ brew install cookiecutter
+```
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/go-coldbrew/go-coldbrew.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Finally, to run it based on this template, type:
 
-### Support or Contact
+```text
+$ cookiecutter gh:go-coldbrew/cookiecutter-coldbrew
+```
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+You will be asked about your basic info \(name, project name, app name, etc.\). This info will be used to customise your new project.
+
+_Warning: After this point, change 'github.com/ankurs', 'MyApp', etc to your own information._
+
+Answer the prompts with your own desired options. For example:
+
+```text
+source_path [github.com/ankurs]: github.com/ankurs
+app_name [MyApp]: MyApp
+grpc_package [github.com.ankurs]: github.com.ankurs
+service_name [MySvc]: MySvc
+project_short_description [A Golang project.]: A Golang project
+docker_image [alpine:latest]:
+docker_build_image [golang]:
+Select docker_build_image_version:
+1 - 1.15
+2 - 1.16
+Choose from 1, 2 [1]: 2
+```
+
+Enter the project and take a look around:
+
+```text
+$ cd MyApp/
+$ ls
+```
+
+Run `make help` to see the available management commands, or just run `make build` to build your project.
+
+```text
+$ make run
+```
