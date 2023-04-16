@@ -21,20 +21,20 @@ Rather than starting from scratch maybe copying some files and then editing the 
 ## Prerequisites
 First, get Cookiecutter. Trust me, it's awesome:
 
-```text
+```shell
 $ pip install cookiecutter
 ```
 
 Alternatively, you can install `cookiecutter` with homebrew:
 
-```text
+```shell
 $ brew install cookiecutter
 ```
 ## Using the ColdBrew Cookiecutter Template
 
 To run it based on this template, type:
 
-```text
+```shell
 $ cookiecutter gh:go-coldbrew/cookiecutter-coldbrew
 ```
 
@@ -47,7 +47,7 @@ After this point, change 'github.com/ankurs', 'MyApp', etc to your own informati
 
 Answer the prompts with your own desired options. For example:
 
-```text
+{% highlight shell %}
 source_path [github.com/ankurs]: github.com/ankurs
 app_name [MyApp]: MyApp
 grpc_package [github.com.ankurs]: github.com.ankurs
@@ -59,19 +59,19 @@ Select docker_build_image_version:
 1 - 1.19
 2 - 1.20
 Choose from 1, 2 [1]: 2
-```
+{% endhighlight %}
 
 ## Checkout your new project
 
 Enter the project and take a look around:
 
-```text
+```shell
 $ cd MyApp/
 $ ls
 ```
 
 Run `make help` to see the available management commands, or just run `make build` to build your project.
 
-```text
+```shell
 $ make run
 ```
