@@ -1,1 +1,31 @@
-theme: jekyll-theme-cayman
+title: ColdBrew
+description: Coldbrew is a Go library for creating cloud native applications.
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "https://docs.coldbrew.cloud"
+repository: go-coldbrew/
+logo: "/assets/images/coldbrew.png"
+
+permalink: pretty
+
+callouts_level: quiet
+callouts:
+  highlight:
+    color: yellow
+  important:
+    title: Important
+    color: blue
+  new:
+    title: New
+    color: green
+  note:
+    title: Note
+    color: purple
+  warning:
+    title: Warning
+    color: red
+
+
+theme: just-the-docs
+#color_scheme: dark
+plugins:
+  - jekyll-default-layout
