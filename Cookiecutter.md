@@ -1,3 +1,10 @@
+---
+layout: default
+title: "Getting Started"
+nav_order: 2
+description: "Getting Started with ColdBrew"
+permalink: /cookiecutter
+---
 # Getting Started with ColdBrew
 
 Let's pretend you want to create a project called "echoserver". Rather than starting from scratch maybe copying some files and then editing the results to include your name, email, and various configuration issues that always get forgotten until the worst possible moment, get cookiecutter to do all the work.
@@ -35,8 +42,8 @@ project_short_description [A Golang project.]: A Golang project
 docker_image [alpine:latest]:
 docker_build_image [golang]:
 Select docker_build_image_version:
-1 - 1.17
-2 - 1.18
+1 - 1.19
+2 - 1.20
 Choose from 1, 2 [1]: 2
 ```
 
