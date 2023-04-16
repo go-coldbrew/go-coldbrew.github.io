@@ -13,7 +13,9 @@ Coldbrew is a collection of Go library for creating cloud native applications. I
 
 [Get started now](/getting-started){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
 [View Packages](/packages){: .btn .fs-5 .mb-4 .mb-md-0 .btn-blue .mr-2}
-[View it on GitHub](https://github.com/go-coldbrew/){: .btn .fs-5 .mb-4 .mb-md-0}
+[Common Patterns](/patterns){: .btn .fs-5 .mb-4 .mb-md-0 .mr-2 .btn-green}
+[View it on GitHub](https://github.com/go-coldbrew/){: .btn .fs-5 .mb-4 .mb-md-0 .mr-2}
+
 
 ## Why ColdBrew ?
 
