@@ -3,12 +3,22 @@ layout: default
 title: "Getting Started"
 nav_order: 2
 description: "Getting Started with ColdBrew"
-permalink: /cookiecutter
+permalink: /getting-started
 ---
 # Getting Started with ColdBrew
+{: .no_toc }
 
-Let's pretend you want to create a project called "echoserver". Rather than starting from scratch maybe copying some files and then editing the results to include your name, email, and various configuration issues that always get forgotten until the worst possible moment, get cookiecutter to do all the work.
+## Table of contents
+{: .no_toc .text-delta }
 
+1. TOC
+{:toc}
+
+Let's pretend you want to create a project called "echoserver".
+
+Rather than starting from scratch maybe copying some files and then editing the results to include your name, email, and various configuration issues that always get forgotten until the worst possible moment, get cookiecutter to do all the work.
+
+## Prerequisites
 First, get Cookiecutter. Trust me, it's awesome:
 
 ```text
@@ -20,8 +30,9 @@ Alternatively, you can install `cookiecutter` with homebrew:
 ```text
 $ brew install cookiecutter
 ```
+## Using the ColdBrew Cookiecutter Template
 
-Finally, to run it based on this template, type:
+To run it based on this template, type:
 
 ```text
 $ cookiecutter gh:go-coldbrew/cookiecutter-coldbrew
@@ -29,7 +40,10 @@ $ cookiecutter gh:go-coldbrew/cookiecutter-coldbrew
 
 You will be asked about your basic info \(name, project name, app name, etc.\). This info will be used to customise your new project.
 
-_Warning: After this point, change 'github.com/ankurs', 'MyApp', etc to your own information._
+## Providing your app information to the cookiecutter
+
+{: .warning }
+After this point, change 'github.com/ankurs', 'MyApp', etc to your own information.
 
 Answer the prompts with your own desired options. For example:
 
@@ -46,6 +60,8 @@ Select docker_build_image_version:
 2 - 1.20
 Choose from 1, 2 [1]: 2
 ```
+
+## Checkout your new project
 
 Enter the project and take a look around:
 
