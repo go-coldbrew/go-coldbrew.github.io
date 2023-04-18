@@ -29,3 +29,5 @@ theme: just-the-docs
 #color_scheme: dark
 plugins:
   - jekyll-default-layout
+  - jekyll-seo-tag
+  - jekyll-github-metadata
