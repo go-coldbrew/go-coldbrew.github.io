@@ -43,6 +43,22 @@ notifier provides notifier services for error reporting (airbrake, bugsnag, roll
 
 Documentation can be found at [notifier-docs]
 
+## [Tracing]
+
+Tracing is a library that provides distributed tracing to Go applications. It offers features such as collecting performance data of an application, identifying where requests are spending most of their time, and segmenting requests. It supports exporting traces to 3rd-party services such as Jaeger, Zipkin, Opentelemetry, and NewRelic.
+
+Documentation can be found at [tracing-docs]
+
+## [Hystrix Prometheus]
+hystrixprometheus provides a Prometheus metrics collector for Hystrix (https://github.com/afex/hystrix-go). This is a workaround for hystrix-go not supporting the prometheus registry
+
+Documentation can be found at [hystrixprometheus-docs]
+
+## [grpcpool]
+grpcpool is a pool of grpc.ClientConns that can be used to make requests to a grpc server. It implements grpc.ClientConnInterface to enable it to be used directly with generated proto stubs.
+
+Documentation can be found at [grpcpool-docs]
+
 ---
 [Core]: https://github.com/go-coldbrew/core/tree/main#readme
 [core-docs]: https://pkg.go.dev/github.com/go-coldbrew/core
@@ -56,3 +72,9 @@ Documentation can be found at [notifier-docs]
 [errors-docs]: https://pkg.go.dev/github.com/go-coldbrew/errors
 [Notifier]: https://github.com/go-coldbrew/errors/tree/main/notifier#readme
 [notifier-docs]: https://pkg.go.dev/github.com/go-coldbrew/errors/notifier
+[Tracing]: https://github.com/go-coldbrew/tracing/tree/main#readme
+[tracing-docs]: https://pkg.go.dev/github.com/go-coldbrew/tracing
+[Hystrix Prometheus]: https://github.com/go-coldbrew/hystrixprometheus#readme
+[hystrixprometheus-docs]: https://pkg.go.dev/github.com/go-coldbrew/hystrixprometheus
+[grpcpool]: https://github.com/go-coldbrew/grpcpool#readme
+[grpcpool-docs]: https://pkg.go.dev/github.com/go-coldbrew/grpcpool
