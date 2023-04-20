@@ -75,7 +75,7 @@ import (
 func init() {
     // set global log level to info
     // this is typically set by the ColdBrew cookiecutter using the LOG_LEVEL environment variable
-    log.SetLevel(log.InfoLevel)
+    log.SetLevel(loggers.InfoLevel)
 }
 
 func handler(w http.ResponseWriter, r *http.Request) {
@@ -87,7 +87,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
     // read request and do something
 
     // override log level for this request to debug
-    ctx = loggers.OverrideLogLevel(ctx, log.DebugLevel)
+    ctx = log.OverrideLogLevel(ctx, loggers.DebugLevel)
     helloWorld(ctx)
 
     // do something else
