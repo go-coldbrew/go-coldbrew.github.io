@@ -1,21 +1,13 @@
 ---
 layout: default
-title: Common Patterns
-description: "A collection of common patterns for the ColdBrew"
-permalink: /patterns
+title: "Log"
+parent: "Common Patterns"
 ---
-# Common Patterns
-{: .no_toc }
-
 ## Table of contents
 {: .no_toc .text-delta }
 
 1. TOC
 {:toc}
-
-## Introduction
-
-This page is a collection of common patterns for the ColdBrew. If you have a pattern you would like to share, please [open an issue](https://github.com/go-coldbrew/docs.coldbrew.cloud/issues)
 
 ## Context aware logs
 
@@ -69,48 +61,54 @@ service HelloService {
 }
 ```
 
-## Adding Tracing to your functions
+## Overriding log level at request time
 
-ColdBrew provides a way to add tracing to your functions using the [go-coldbrew/tracing] package. The Package provides function like `NewInternalSpan/NewExternalSpan/NewDatabaseSpan` which will create a new span and add it to the context.
+It is useful to be able to override the log level at request time. This is useful when you want to be able to debug a request in production without having to redeploy the service or updating the default log level. ColdBrew provides a way to do this by using [OverrideLogLevel] which will override the log level for the request different from the global log level
 
-Make sure you use the context returned from the `NewInternalSpan/NewExternalSpan/NewDatabaseSpan` functions. This is because the span is added to the context. If you don't use the context returned from the function, new spans will not be add at the correct place in the trace.
-
-You can also add tags to the span using the `SetTag/SetQuery/SetError` function. These tags will be added to the span and will be visible in the trace view of your tracing system (e.g. New Relic / Opentelemetry).
-
-Adding `defer span.End()` will make sure that the span will end when the function returns. If you don't end the span, it may never be sent to the tracing system and/or have the wrong duration.
 
 ```go
 import (
-    "github.com/go-coldbrew/tracing"
-    "context"
+    "github.com/go-coldbrew/log"
+    "github.com/go-coldbrew/log/loggers"
 )
 
-func myFunction1(ctx context.Context) {
-    span, ctx := tracing.NewInternalSpan(ctx, "myFunction1") // start a new span for this function
-    defer span.End() // end the span when the function returns
-    span.SetTag("myTag", "myValue") // add a tag to the span to help identify it in the trace view of your tracing system (e.g. Jaeger)
-    myFunction2(ctx)
+func init() {
+    // set global log level to info
+    // this is typically set by the ColdBrew cookiecutter using the LOG_LEVEL environment variable
+    log.SetLevel(log.InfoLevel)
 }
 
-func myFunction2(ctx context.Context) {
-    span, ctx := tracing.NewInternalSpan(ctx, "myFunction2") // start a new span for this function
-    defer span.End() // end the span when the function returns
+func handler(w http.ResponseWriter, r *http.Request) {
+    ctx = r.Context()
+    ctx = loggers.AddToLogContext(ctx, "request-id", "1234")
+    ctx = loggers.AddToLogContext(ctx, "trace-id", "5678")
+    ctx = loggers.AddToLogContext(ctx, "user-id", "abcd")
+
+    // read request and do something
+
+    // override log level for this request to debug
+    ctx = loggers.OverrideLogLevel(ctx, log.DebugLevel)
     helloWorld(ctx)
+
+    // do something else
 }
 
 func helloWorld(ctx context.Context) {
-    span, ctx := tracing.NewInternalSpan(ctx, "helloWorld") // start a new span for this function
-    defer span.End() // end the span when the function returns
-    log.Info(ctx, "Hello World")
+    log.Debug(ctx, "Hello World")
 }
 
-func main() {
-    ctx := context.Background()
-    myFunction1(ctx)
-}
+```
+
+Will output the debug log messages even when the global log level is set to info
+
+```
+{"level":"debug","msg":"Hello World","request-id":"1234","trace-id":"5678","user-id":"abcd","@timestamp":"2020-05-04T15:04:05.000Z"}
 ```
 
 ---
-
 [TraceId interceptor]: https://pkg.go.dev/github.com/go-coldbrew/interceptors#TraceIdInterceptor
 [go-coldbrew/tracing]: https://pkg.go.dev/github.com/go-coldbrew/tracing
+[ColdBrew cookiecutter]: /getting-started
+[interceptors]: https://pkg.go.dev/github.com/go-coldbrew/interceptors
+[UseColdBrewServcerInterceptors]: https://pkg.go.dev/github.com/go-coldbrew/interceptors#UseColdBrewServerInterceptors
+[OverrideLogLevel]: https://github.com/go-coldbrew/log#func-overrideloglevel

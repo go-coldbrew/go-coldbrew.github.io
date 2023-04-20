@@ -5,3 +5,4 @@ gem "just-the-docs", "0.5.0"
 gem "jekyll-default-layout"
 gem "jekyll-github-metadata", ">= 2.15"
 gem "webrick", "~> 1.7"
+gem 'jekyll-target-blank'
