@@ -56,4 +56,4 @@ ColdBrew integrates with all the popular libraries. We strongly believe in the [
 [DRY]: https://en.wikipedia.org/wiki/Don%27t_repeat_yourself
 [12 factor]: https://12factor.net/
 [getting started]: /getting-started/
-[cookiecutter]: /getting-started/#using-the-coldbrew-cookiecutter-template
+[cookiecutter]: getting-started#using-the-coldbrew-cookiecutter-template
