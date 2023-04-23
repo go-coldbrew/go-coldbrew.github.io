@@ -39,7 +39,10 @@ Showing top 5 nodes out of 45
 
 ### Analyzing profiles
 
-The `go tool pprof` command can be  also be used analyze profiles to find the root cause of performance issues. For more information, please refer to the [pprof documentation](https://golang.org/pkg/net/http/pprof/) and the [diagnostics doc].
+The `go tool pprof` command can be  also be used analyze profiles to find the root cause of performance issues. For more information, please refer to the [pprof walkthrough] and the [diagnostics doc].
+
+{: .important }
+Its recommended that you go though the [pprof walkthrough] to get a better understanding of how to use the pprof.
 
 ### Disabling pprof endpoint
 
@@ -58,3 +61,4 @@ For information on this feature, please refer to the [Overriding log level at re
 [configuration option]: https://pkg.go.dev/github.com/go-coldbrew/core/config#Config
 [Overriding log level at request time]: /patterns/Log/#overriding-log-level-at-request-time
 [diagnostics doc]: https://go.dev/doc/diagnostics#profiling
+[pprof walkthrough]: https://go.dev/blog/pprof

@@ -12,7 +12,7 @@ parent: "Common Patterns"
 ## Returning HTTP status codes from gRPC APIs
 
 ### Overview
-gRPC APIs are defined using the [Protocol Buffers](https://developers.google.com/protocol-buffers/) language. The gRPC framework provides a set of standard response messages that can be used to return errors from gRPC APIs. These messages are defined in the [google/rpc/status.proto].
+gRPC APIs are defined using the [Protocol Buffers](https://developers.google.com/protocol-buffers/). gRPC provides a set of standard response messages that can be used to return errors from gRPC APIs. These messages are defined in the [google/rpc/status.proto].
 
 ```proto
 // The `Status` type defines a logical error model that is suitable for
@@ -38,11 +38,11 @@ message Status {
   repeated google.protobuf.Any details = 3;
 }
 ```
-### Error codes and HTTP status codes mapping
+### gRPC status codes and HTTP status codes mapping
 
-gRPC error codes can be easlity translated to HTTP status codes. The following table shows the mapping between the canonical error codes and HTTP status codes:
+gRPC status codes can be easlity translated to HTTP status codes. The following table shows the mapping between the canonical error codes and HTTP status codes:
 
-| Canonical error code  | HTTP status code |
+| gRPC status code      | HTTP status code |
 | --------------------  | ---------------- |
 | `OK`                  | 200              |
 | `INVALID_ARGUMENT`    | 400              |
@@ -58,8 +58,7 @@ gRPC error codes can be easlity translated to HTTP status codes. The following t
 | `UNIMPLEMENTED`       | 501              |
 | `DEADLINE_EXCEEDED`   | 504              |
 
-Full list of canonical error codes can be found in the [google/rpc/code.proto] file.
-
+Full list of gRPC status codes can be found in the [google/rpc/code.proto] file.
 
 ### Returning errors from RPC
 
