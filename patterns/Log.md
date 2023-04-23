@@ -36,7 +36,7 @@ func helloWorld(ctx context.Context) {
 
 Will output
 
-```
+```json
 {"level":"info","msg":"Hello World","request-id":"1234","trace-id":"5678","user-id":"abcd","@timestamp":"2020-05-04T15:04:05.000Z"}
 ```
 
@@ -101,7 +101,7 @@ func helloWorld(ctx context.Context) {
 
 Will output the debug log messages even when the global log level is set to info
 
-```
+```json
 {"level":"debug","msg":"Hello World","request-id":"1234","trace-id":"5678","user-id":"abcd","@timestamp":"2020-05-04T15:04:05.000Z"}
 ```
 

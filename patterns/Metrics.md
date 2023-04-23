@@ -38,12 +38,41 @@ var (
     })
 )
 
-func main() {
+func myFunction() {
+    ...
     myCounter.Inc()
+    ...
 }
 ```
 
 These metrics will be automatically collected and exposed by Coldbrew on the `/metrics` endpoint.
+
+{: .note .note-info }
+To learn more about the Prometheus and the data types it supports, see [here](https://prometheus.io/docs/concepts/metric_types/)
+
+## How to use Hystrix Metrics in Prometheus
+
+[Hystrix Prometheus] is a library that provides a Prometheus metrics collector for [Hystrix-go]. To use it, you can register the collector with the default Prometheus registry:
+
+```go
+
+import (
+    metricCollector "github.com/afex/hystrix-go/hystrix/metric_collector"
+    "github.com/go-coldbrew/hystrixprometheus"
+    "github.com/prometheus/client_golang/prometheus"
+)
+
+// setupHystrix sets up the hystrix metrics
+// This is a workaround for hystrix-go not supporting the prometheus registry
+func setupHystrix() {
+	promC := hystrixprometheus.NewPrometheusCollector("hystrix", nil, prometheus.DefBuckets)
+	metricCollector.Registry.Register(promC.Collector)
+}
+```
+
+{: .note .note-info }
+If you are using the `go-coldbrew/core` package, you can skip the above step as it will automatically register the collector for you.
+See [Hystrix Prometheus] for more details.
 
 ---
 [HTTP port]: https://pkg.go.dev/github.com/go-coldbrew/core/config#readme-type-config
