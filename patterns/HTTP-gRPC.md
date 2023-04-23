@@ -232,3 +232,6 @@ Coldbrew errors package also provides stack trace support for errrors, which can
 [google/rpc/code.proto]: https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto
 [Coldbrew errors package]: https://pkg.go.dev/github.com/go-coldbrew/errors#NewWithStatus
 [errors package]: https://pkg.go.dev/github.com/go-coldbrew/errors
+[envconfig]: https://github.com/kelseyhightower/envconfig
+[grpc-gateway]: https://grpc-ecosystem.github.io/grpc-gateway/
+[Coldbrew]: https://docs.coldbrew.cloud

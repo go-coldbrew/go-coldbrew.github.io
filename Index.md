@@ -40,6 +40,12 @@ ColdBrew integrates with all the popular libraries. We strongly believe in the [
 - [sentry] - Error Reporting
 - [go-grpc-middleware] - Middlewares: interceptors, helpers and utilities.
 
+## Next Steps
+
+- [Getting Started]
+- [Common Patterns]
+- [Packages]
+
 ---
 [orion]: https://github.com/carousell/Orion
 [grpc]:https://grpc.io/
@@ -55,5 +61,7 @@ ColdBrew integrates with all the popular libraries. We strongly believe in the [
 [opentelemetry]: https://opentelemetry.io/
 [DRY]: https://en.wikipedia.org/wiki/Don%27t_repeat_yourself
 [12 factor]: https://12factor.net/
-[getting started]: /getting-started/
+[getting started]: /getting-started
 [cookiecutter]: getting-started#using-the-coldbrew-cookiecutter-template
+[common patterns]: /patterns
+[packages]: /packages
