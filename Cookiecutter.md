@@ -75,3 +75,8 @@ Run `make help` to see the available management commands, or just run `make buil
 ```shell
 $ make run
 ```
+
+## Working with your new project
+
+Your project is now ready to be worked on. You can find the generated `README.md` file in the project root directory. It contains a lot of useful information about the project. You can also find the generated `Dockerfile` and `Makefile` in the project root directory.  It contains a lot of useful commands to build, test, and run your project. You can run `make help` to see the available management commands.
+

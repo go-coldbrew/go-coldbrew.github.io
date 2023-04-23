@@ -56,10 +56,70 @@ func main() {
 
 ## Adding Tracing to your gRPC services
 
+### Adding tracing to your gRPC server
+
 When you create a new service with [ColdBrew cookiecutter] it will automatically add tracing (New Relic / Opentelemetry) to your gRPC services. This is done by adding the [interceptors] to your gRPC server.
 
 {: .note .note-info }
-To disable coldbrew provided interceptors you can use the function [UseColdBrewServcerInterceptors] to disable them.
+To disable coldbrew provided interceptors you can call the function [UseColdBrewServcerInterceptors].
+
+If you want to add interceptors to your gRPC server, you can use the [Default Interceptors] from [interceptors] package to add the ColdBrew interceptors to your gRPC server.
+
+Example:
+
+```go
+import (
+    "context"
+    "github.com/go-coldbrew/interceptors"
+    "github.com/go-coldbrew/log"
+    "google.golang.org/grpc"
+)
+
+func main() {
+    server := grpc.NewServer(
+        // Add the ColdBrew interceptors to your gRPC server to add tracing/metrics to your gRPC server calls
+        grpc.ChainUnaryInterceptor(interceptors.DefaultInterceptors()...),
+    )
+    pb.RegisterHelloWorldServer(server, &HelloWorldServer{})
+    if err := server.Serve(lis); err != nil {
+        log.Fatal(context.Background(), err)
+    }
+}
+```
+
+### Adding tracing to your gRPC client
+
+ColdBrew provides gRPC client interceptors to add tracing/metrics to your gRPC client. You can add [Default Client Interceptors] which are a collection of interceptors provided by ColdBrew, or you can add your own interceptors.
+
+Example:
+
+```go
+import (
+    "github.com/go-coldbrew/interceptors"
+    "github.com/go-coldbrew/log"
+    "google.golang.org/grpc"
+)
+
+func main() {
+    ctx := context.Background()
+    conn, err := grpc.Dial(
+        "localhost:8080",
+        grpc.WithInsecure(),
+        // Add the ColdBrew interceptors to your gRPC client to add tracing/metrics to your gRPC client calls
+        grpc.WithChainUnaryInterceptor(interceptors.DefaultClientInterceptors()...),
+    )
+    if err != nil {
+        log.Fatal(ctx, err)
+    }
+    defer conn.Close()
+    client := pb.NewHelloWorldClient(conn)
+    resp, err := client.HelloWorld(ctx, &pb.HelloWorldRequest{})
+    if err != nil {
+        log.Fatal(ctx, err)
+    }
+    log.Info(ctx, resp)
+}
+```
 
 ---
 
@@ -68,3 +128,5 @@ To disable coldbrew provided interceptors you can use the function [UseColdBrewS
 [ColdBrew cookiecutter]: /getting-started
 [interceptors]: https://pkg.go.dev/github.com/go-coldbrew/interceptors
 [UseColdBrewServcerInterceptors]: https://pkg.go.dev/github.com/go-coldbrew/interceptors#UseColdBrewServerInterceptors
+[Default Client Interceptors]: https://pkg.go.dev/github.com/go-coldbrew/interceptors#DefaultClientInterceptors
+[Default Interceptors]: https://pkg.go.dev/github.com/go-coldbrew/interceptors#DefaultInterceptors

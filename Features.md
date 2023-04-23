@@ -68,4 +68,4 @@ ColdBrew is completely open source. You can use it for free in your commercial p
 [opentelemetry]: https://opentelemetry.io/
 [DRY]: https://en.wikipedia.org/wiki/Don%27t_repeat_yourself
 [12factor]: https://12factor.net/
-[getting started]: /getting-started/
+[getting started]: /getting-started
