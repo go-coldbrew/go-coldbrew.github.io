@@ -116,6 +116,12 @@ func main() {
 }
 ```
 
+## Adding custom interceptors to Default interceptors
+
+You can add your own interceptors to the [Default Interceptors] by appending to the list of interceptors.
+
+Use the function [AddUnaryServerInterceptor] and [AddUnaryClientInterceptor] to add your own interceptors to the default server and client interceptors.
+
 ---
 
 [TraceId interceptor]: https://pkg.go.dev/github.com/go-coldbrew/interceptors#TraceIdInterceptor
@@ -130,3 +136,5 @@ func main() {
 [default filter function]: https://pkg.go.dev/github.com/go-coldbrew/interceptors#FilterMethodsFunc
 [FilterMethods]: https://pkg.go.dev/github.com/go-coldbrew/interceptors#FilterMethods
 [SetFilterFunc]: https://pkg.go.dev/github.com/go-coldbrew/interceptors#SetFilterFunc
+[AddUnaryServerInterceptor]: https://pkg.go.dev/github.com/go-coldbrew/interceptors#AddUnaryServerInterceptor
+[AddUnaryClientInterceptor]: https://pkg.go.dev/github.com/go-coldbrew/interceptors#AddUnaryClientInterceptor
