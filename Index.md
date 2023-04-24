@@ -43,6 +43,7 @@ ColdBrew integrates with all the popular libraries. We strongly believe in the [
 ## Next Steps
 
 - [Getting Started]
+- [Integrations]
 - [Common Patterns]
 - [Packages]
 
@@ -65,3 +66,4 @@ ColdBrew integrates with all the popular libraries. We strongly believe in the [
 [cookiecutter]: getting-started#using-the-coldbrew-cookiecutter-template
 [common patterns]: /patterns
 [packages]: /packages
+[integrations]: /integrations

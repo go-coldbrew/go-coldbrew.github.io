@@ -4,6 +4,7 @@ baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://docs.coldbrew.cloud"
 repository: go-coldbrew/
 logo: "/assets/images/coldbrew.png"
+favicon_ico: "/assets/images/coldbrew.ico"
 
 permalink: pretty
 

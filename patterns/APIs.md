@@ -407,7 +407,6 @@ Coldbrew errors package also provides stack trace support for errors, which can 
 [Coldbrew errors package]: https://pkg.go.dev/github.com/go-coldbrew/errors#NewWithStatus
 [errors package]: https://pkg.go.dev/github.com/go-coldbrew/errors
 [envconfig]: https://github.com/kelseyhightower/envconfig
-[grpc-gateway]: https://grpc-ecosystem.github.io/grpc-gateway/
 [Coldbrew]: https://docs.coldbrew.cloud
 [google.api.http annotations]: https://cloud.google.com/endpoints/docs/grpc/transcoding
 [grpc-gateway]: https://grpc-ecosystem.github.io/grpc-gateway/
