@@ -9,6 +9,10 @@ parent: "Common Patterns"
 1. TOC
 {:toc}
 
+## Overview
+
+Coldbrew provides a way to add tracing to your functions using the [go-coldbrew/tracing] package. The Package implements multiple tracing backends (e.g. [New Relic] / [Opentelemetry] / [Jaeger]) which enables you to switch between them without changing your code.
+
 ## Adding Tracing to your functions
 
 ColdBrew provides a way to add tracing to your functions using the [go-coldbrew/tracing] package. The Package provides function like `NewInternalSpan/NewExternalSpan/NewDatabaseSpan` which will create a new span and add it to the context.
@@ -79,3 +83,6 @@ see [Adding interceptors to your gRPC client]
 [Default Interceptors]: https://pkg.go.dev/github.com/go-coldbrew/interceptors#DefaultInterceptors
 [Adding interceptors to your gRPC server]: /patterns/interceptors#adding-interceptors-to-your-grpc-server
 [Adding interceptors to your gRPC client]: /patterns/interceptors#adding-interceptors-to-your-grpc-client
+[New Relic]: https://newrelic.com/
+[Opentelemetry]: https://opentelemetry.io/
+[Jaeger]: https://www.jaegertracing.io/
