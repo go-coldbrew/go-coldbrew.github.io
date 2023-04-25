@@ -25,12 +25,6 @@ Coldbrew relies on [GRPC Gateway] to expose the gRPC API as a REST API. The gate
 
 To see how it works in Coldbrew, check out the [gRPC Gateway example].
 
-## Buf
-
-[Buf] is a tool for managing protocol buffers. It can be used to generate code, lint proto files, and more. Buf simplifies the process of managing proto files and helps to keep them consistent across the team. It also helps to avoid common mistakes and helps to keep the proto files up to date.
-
-[Coldbrew cookiecutter] template includes a `buf.yaml` file that configures Buf to generate code for the gRPC service. The code generation config is stored in the `buf.gen.yaml` file.
-
 ## New Relic
 
 [New Relic] is a SaaS-based monitoring tool that helps to monitor the performance of the services. It collects data about the services and displays it in a dashboard. It also provides alerts when the service is not performing well.
@@ -116,6 +110,12 @@ To use Opentelemetry tracing in your app, use the Coldbrew [tracing] and [interc
 
 You can also add more tracing to your app by [adding tracing] to your functions.
 
+## Buf
+
+[Buf] is a tool for managing protocol buffers. It can be used to generate code, lint proto files, and more. Buf simplifies the process of managing proto files and helps to keep them consistent across the team. It also helps to avoid common mistakes and helps to keep the proto files up to date.
+
+[Coldbrew cookiecutter] template includes a `buf.yaml` file that configures Buf to generate code for the gRPC service. The code generation config is stored in the `buf.gen.yaml` file.
+
 ## Coldbrew packages
 
 All Coldbrew packages are designed to be used as standalone packages. They can be used in any Go project. They are not tied to Coldbrew and can be used in any Go project.
@@ -126,11 +126,11 @@ To see all the Coldbrew packages, check out the [Coldbrew packages] page.
 
 ---
 [GRPC Gateway]: https://grpc-ecosystem.github.io/grpc-gateway/
-[gRPC Gateway example]: /patterns/APIs/#adding-a-new-api-to-your-service
+[gRPC Gateway example]: /howto/APIs/#adding-a-new-api-to-your-service
 [Buf]: https://buf.build/
 [Coldbrew cookiecutter]: /getting-started#using-the-coldbrew-cookiecutter-template
 [Prometheus]: https://prometheus.io/
-[metrics documentation]: /patterns/Metrics/
+[metrics documentation]: /howto/Metrics/
 [New Relic]: https://newrelic.com/
 [Sentry]: https://sentry.io/welcome/
 [Opentelemetry]: https://opentelemetry.io/
@@ -140,7 +140,7 @@ To see all the Coldbrew packages, check out the [Coldbrew packages] page.
 [Core]: https://github.com/go-coldbrew/core/tree/main#readme
 [Coldbrew packages]: /packages
 [Config]: https://pkg.go.dev/github.com/go-coldbrew/core/config#Config
-[adding tracing]: /patterns/Tracing/#adding-tracing-to-your-functions
+[adding tracing]: /howto/Tracing/#adding-tracing-to-your-functions
 [SetupNewRelic]: https://pkg.go.dev/github.com/go-coldbrew/core#SetupNewRelic
 [SetupNROpenTelemetry]: https://pkg.go.dev/github.com/go-coldbrew/core#SetupNROpenTelemetry
 [interceptors]: https://pkg.go.dev/github.com/go-coldbrew/interceptors
@@ -148,4 +148,4 @@ To see all the Coldbrew packages, check out the [Coldbrew packages] page.
 [prometheus/client_golang]: https://github.com/prometheus/client_golang
 [SetupSentry]: https://pkg.go.dev/github.com/go-coldbrew/core#SetupSentry
 [Opentelemetry documentation]: https://opentelemetry.io/docs/go/getting-started/
-[errors documentation]: /patterns/errors#coldbrew-notifier-package
+[errors documentation]: /howto/errors/#coldbrew-notifier-package

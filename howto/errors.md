@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Errors"
-parent: "Common Patterns"
+parent: "How To"
 description: "How to use go-coldbrew/errors package to handle errors in Go."
 ---
 ## Table of contents
@@ -215,7 +215,7 @@ the `trace` and `grpcMethod` fields are added by the ColdBrew, for more informat
 [errors package]: https://pkg.go.dev/github.com/go-coldbrew/errors
 [notifier package]: https://pkg.go.dev/github.com/go-coldbrew/errors/notifier
 [pkg/errors]: https://pkg.go.dev/github.com/pkg/errors
-[context aware logs]: /patterns/Log#context-aware-logs
+[context aware logs]: /howto/Log#context-aware-logs
 [Sentry]: https://sentry.io
 [Airbrake]: https://airbrake.io
 [Rollbar]: https://rollbar.com

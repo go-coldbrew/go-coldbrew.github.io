@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Debugging"
-parent: "Common Patterns"
+parent: "How To"
 ---
 ## Table of contents
 {: .no_toc .text-delta }
@@ -59,6 +59,6 @@ For information on this feature, please refer to the [Overriding log level at re
 
 ---
 [configuration option]: https://pkg.go.dev/github.com/go-coldbrew/core/config#Config
-[Overriding log level at request time]: /patterns/Log/#overriding-log-level-at-request-time
+[Overriding log level at request time]: /howto/Log/#overriding-log-level-at-request-time
 [diagnostics doc]: https://go.dev/doc/diagnostics#profiling
 [pprof walkthrough]: https://go.dev/blog/pprof
