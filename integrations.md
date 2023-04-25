@@ -94,6 +94,10 @@ If you app is using [Coldbrew cookiecutter] template, initialisation is done aut
 
 If you are using Coldbrew packages in your app, you need to initialise Sentry manually. To initialise Sentry use the [SetupSentry] function from the `go-coldbrew/core` package.
 
+### Using
+
+To use Sentry in your app, have a look at the [errors documentation].
+
 ## Opentelemetry
 
 [Opentelemetry] is a collection of tools that help to collect and analyze telemetry data. It includes a time series database, a query language, and a visualization UI.
@@ -144,3 +148,4 @@ To see all the Coldbrew packages, check out the [Coldbrew packages] page.
 [prometheus/client_golang]: https://github.com/prometheus/client_golang
 [SetupSentry]: https://pkg.go.dev/github.com/go-coldbrew/core#SetupSentry
 [Opentelemetry documentation]: https://opentelemetry.io/docs/go/getting-started/
+[errors documentation]: /patterns/errors#coldbrew-notifier-package
