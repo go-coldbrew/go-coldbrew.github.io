@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Interceptors"
-parent: "Common Patterns"
+parent: "How To"
 ---
 ## Table of contents
 {: .no_toc .text-delta }

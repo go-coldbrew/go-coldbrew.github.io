@@ -13,7 +13,7 @@ Coldbrew is a collection of Go library for creating cloud native applications. I
 
 [Get started now](/getting-started){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
 [View Packages](/packages){: .btn .fs-5 .mb-4 .mb-md-0 .btn-blue .mr-2}
-[Common Patterns](/patterns){: .btn .fs-5 .mb-4 .mb-md-0 .mr-2 .btn-green}
+[How To](/howto){: .btn .fs-5 .mb-4 .mb-md-0 .mr-2 .btn-green}
 [View it on GitHub](https://github.com/go-coldbrew/){: .btn .fs-5 .mb-4 .mb-md-0 .mr-2}
 
 
@@ -44,7 +44,7 @@ ColdBrew integrates with all the popular libraries. We strongly believe in the [
 
 - [Getting Started]
 - [Integrations]
-- [Common Patterns]
+- [How To]
 - [Packages]
 
 ---
@@ -64,6 +64,6 @@ ColdBrew integrates with all the popular libraries. We strongly believe in the [
 [12 factor]: https://12factor.net/
 [getting started]: /getting-started
 [cookiecutter]: getting-started#using-the-coldbrew-cookiecutter-template
-[common patterns]: /patterns
 [packages]: /packages
 [integrations]: /integrations
+[how to]: /howto

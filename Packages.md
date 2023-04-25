@@ -11,7 +11,7 @@ permalink: /packages
 {: .no_toc .text-delta }
 
 1. TOC
-{:toc} 
+{:toc}
 
 ## [Core]
 The core module is the base module and provides the base implementation for ColdBrew. It works in conjunction with the other modules to provide the full functionality of Cold Brew.

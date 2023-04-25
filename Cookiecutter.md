@@ -84,7 +84,7 @@ You can also find the generated `Dockerfile` and `Makefile` in the project root 
 
 ## Next Steps
 
-Now that you have a project, you might want to learn more about some of the [Common Patterns] in ColdBrew.
+Now that you have a project, you might want to learn more about some of the [How To] in ColdBrew.
 
 ---
-[Common Patterns]: /patterns
+[How To]: /howto

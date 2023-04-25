@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Tracing"
-parent: "Common Patterns"
+parent: "How To"
 ---
 ## Table of contents
 {: .no_toc .text-delta }
@@ -81,8 +81,8 @@ see [Adding interceptors to your gRPC client]
 [UseColdBrewServcerInterceptors]: https://pkg.go.dev/github.com/go-coldbrew/interceptors#UseColdBrewServerInterceptors
 [Default Client Interceptors]: https://pkg.go.dev/github.com/go-coldbrew/interceptors#DefaultClientInterceptors
 [Default Interceptors]: https://pkg.go.dev/github.com/go-coldbrew/interceptors#DefaultInterceptors
-[Adding interceptors to your gRPC server]: /patterns/interceptors#adding-interceptors-to-your-grpc-server
-[Adding interceptors to your gRPC client]: /patterns/interceptors#adding-interceptors-to-your-grpc-client
+[Adding interceptors to your gRPC server]: /howto/interceptors#adding-interceptors-to-your-grpc-server
+[Adding interceptors to your gRPC client]: /howto/interceptors#adding-interceptors-to-your-grpc-client
 [New Relic]: https://newrelic.com/
 [Opentelemetry]: https://opentelemetry.io/
 [Jaeger]: https://www.jaegertracing.io/
