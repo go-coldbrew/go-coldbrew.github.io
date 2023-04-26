@@ -43,3 +43,4 @@ plugins:
   - jekyll-seo-tag
   - jekyll-github-metadata
   - jekyll-target-blank
+  - jekyll-sitemap

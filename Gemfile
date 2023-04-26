@@ -6,3 +6,4 @@ gem "jekyll-default-layout"
 gem "jekyll-github-metadata", ">= 2.15"
 gem "webrick", "~> 1.7"
 gem 'jekyll-target-blank'
+gem "jekyll-sitemap"
