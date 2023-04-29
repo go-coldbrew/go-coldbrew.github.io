@@ -2,7 +2,7 @@
 layout: default
 title: "Signal Handling and Graceful Shutdown"
 parent: "How To"
-description: "How unix signal handling works in Coldbrew"
+description: "How POSIX signals handling works in Coldbrew"
 ---
 ## Table of contents
 {: .no_toc .text-delta }
